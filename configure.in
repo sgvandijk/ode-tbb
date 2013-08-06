@@ -1,7 +1,7 @@
 dnl AC_INIT does not take a macro as a version nr: set it separately! - Bram
-AC_INIT([ODE],[0.11.1],[ode@ode.org])
+AC_INIT([ODE],[0.11.1-tbb],[ode@ode.org])
 # AC_CONFIG_SRCDIR([ode/src/ode.cpp])
-ODE_RELEASE=0.11.1
+ODE_RELEASE=0.11.1-tbb
 AC_SUBST(ODE_RELEASE)
 
 # Those are instructions from the Libtool manual:
@@ -230,7 +230,9 @@ dnl stdc++ is required when linking C programs against ode
 AC_CHECK_LIB(stdc++,main,[LIBSTDCXX="-lstdc++"],[LIBSTDCXX=])
 AC_SUBST(LIBSTDCXX)
 AC_CHECK_LIB(pthread,main,[LIBS="$LIBS -lpthread"])
-
+AC_CHECK_LIB(tbb,main,[LIBS="$LIBS -ltbb"],[
+echo "Thread Building Blocks library not found"
+exit -1])
 
 dnl test if we will build demos
 AM_CONDITIONAL(ENABLE_DEMOS, test x$enable_demos = xyes)
@@ -454,4 +456,5 @@ echo "  Enable debug error check: $asserts"
 echo "  Headers will be installed in $includedir/ode"
 echo "  Libraries will be installed in $libdir"
 echo "  Building in directory    $BUILDDIR"
+echo "  LIBS                     $LIBS"
 

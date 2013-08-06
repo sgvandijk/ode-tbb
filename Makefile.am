@@ -29,7 +29,7 @@ release: dist-gzip dist-bzip2
 	@echo Created release packages for ${PACKAGE}-${VERSION}.
 
 EXTRA_DIST = autogen.sh build tools \
-        CHANGELOG.txt INSTALL.txt README.txt LICENSE.TXT
+        CHANGELOG.txt INSTALL.txt README.txt LICENSE.TXT LICENSE-BSD.TXT
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = ode.pc

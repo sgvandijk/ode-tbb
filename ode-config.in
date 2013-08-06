@@ -42,7 +42,7 @@ while test $# -gt 0; do
       echo  -I@includedir@ @ODE_PRECISION@
       ;;
     --libs)
-      echo  -L@libdir@ -lode
+      echo  -L@libdir@ -lode -ltbb
       ;;
     *)
       echo "${usage}" 1>&2

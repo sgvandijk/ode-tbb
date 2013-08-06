@@ -117,6 +117,7 @@ struct dxBody : public dObject {
   dxJointNode *firstjoint;	// list of attached joints
   unsigned flags;			// some dxBodyFlagXXX flags
   dGeomID geom;			// first collision geom associated with body
+  bool geomMoved;   // whether geom is moved
   dMass mass;			// mass parameters about POR
   dMatrix3 invI;		// inverse of mass.I
   dReal invMass;		// 1 / mass.mass

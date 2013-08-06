@@ -8,21 +8,26 @@ the rules for this file:
   * keep the format consistent (79 char width, M/D/Y date format).
 
 ------------------------------------------------------------------------------
+10/16/09 Daniel K. O.
+
+        * Packaging fix: added LICENSE-BSD.TXT to the archive.
+        * Updated OU.
+
 05/24/09 Daniel K. O.
 
-		* Made the new trimesh collider the default.
-		* Added a "-texturepath" option to drawstuff.
+        * Made the new trimesh collider the default.
+        * Added a "-texturepath" option to drawstuff.
 
 05/18/09 Oleh Derevenko
 
-		* Heightfield rotation fixed to avoid NaNs while rotating infinite 
-		  MIN/MAX heights.
+        * Heightfield rotation fixed to avoid NaNs while rotating infinite 
+          MIN/MAX heights.
 
 05/03/09 Oleh Derevenko
 
-		* Incorrect parameter order fixed on contact merging in Sphere-Trimesh
-		  collisions. The bug resulted in merged contact remaining with normal 
-		  of first contact found. Thanks to Dimitris Papavasiliou for reporting.
+        * Incorrect parameter order fixed on contact merging in Sphere-Trimesh
+          collisions. The bug resulted in merged contact remaining with normal 
+          of first contact found. Thanks to Dimitris Papavasiliou for reporting.
 
 04/23/09 Daniel K. O.
         * Fixed bug #2685170: use the C99 __func__ instead of __FUNCTION__ when
